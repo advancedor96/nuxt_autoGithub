@@ -1,8 +1,10 @@
 <template>
   <div>
     <div class="button-container">
-    <div class="calendar">
-        Loading....
+    <div class="myContainer">
+      <div class="calendar">
+          Loading....
+      </div>
     </div>
       <a class="button" href="#" @click="callHehe">Update github profile</a>
   </div>
@@ -10,14 +12,17 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, inject } from 'vue'
+import githubCalendar from 'github-calendar';
+// const githubCalendar = inject('githubCalendar');
+onMounted(()=> {
+  if(githubCalendar){
+    githubCalendar('.calendar', 'advancedor96');
+  }else{
+    console.log('還沒載入');
+    
+  }
 
-onMounted(async ()=> {
-    if (process.client) {
-      const { default: GitHubCalendar } = await import('github-calendar');
-      // const GitHubCalendar = require('github-calendar');
-      // GitHubCalendar(".calendar", "advancedor96", { responsive: true , tooltips: true});
-    }
 })
 const callHehe = async ()=>{
   const { data } = await useFetch('/api/hehe')
@@ -57,5 +62,9 @@ const callHehe = async ()=>{
     .button:hover {
         background-color: #FF9999;
         color: #FFFFFF;
+    }
+    .myContainer{
+      max-width: 100vw;
+       overflow-x: auto;
     }
 </style>
