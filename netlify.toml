@@ -1,0 +1,2 @@
+[functions."scheduled_function]
+schedule = "@hourly"

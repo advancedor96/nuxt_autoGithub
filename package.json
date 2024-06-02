@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@netlify/functions": "^2.7.0",
     "github-calendar": "^2.3.4",
     "nuxt": "^3.11.2",
     "vue": "^3.4.21",
