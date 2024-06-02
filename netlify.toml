@@ -1,5 +1,4 @@
-[functions."scheduled_function"]
-schedule = "@hourly"
+[functions]
+  node_bundler = "esbuild"
 
-[build]
-  functions = "netlify/functions"
+

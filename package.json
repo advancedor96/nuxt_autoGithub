@@ -12,6 +12,7 @@
   "dependencies": {
     "@netlify/functions": "^2.7.0",
     "github-calendar": "^2.3.4",
+    "node-fetch": "^3.3.2",
     "nuxt": "^3.11.2",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
