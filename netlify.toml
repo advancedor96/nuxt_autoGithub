@@ -1,2 +1,5 @@
 [functions."scheduled_function"]
 schedule = "@hourly"
+
+[build]
+  functions = "netlify/functions"
