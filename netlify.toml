@@ -1,4 +1,5 @@
-[functions]
+[functions."hello"]
+  schedule = "* * * * *"
   node_bundler = "esbuild"
 
 
