@@ -1,5 +1,5 @@
 export default async (req, context) => {
-  // const { next_run } = await fetch('http://localhost:8888/api/hehe')
+  const data = await fetch('/api/hehe')
 
   console.log('呼叫了api！！呼叫了！！呼叫了！！呼叫了！！來了:');
 
