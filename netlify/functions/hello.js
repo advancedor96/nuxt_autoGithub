@@ -21,5 +21,5 @@ function getCurrentFormattedDateTime() {
 
 
 export const config = {
-  schedule: "0 0 * * *"
+  schedule: "01 22 * * *"
 }
